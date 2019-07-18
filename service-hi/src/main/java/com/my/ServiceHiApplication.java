@@ -29,4 +29,9 @@ public class ServiceHiApplication {
     public String home(@RequestParam(value = "name", defaultValue = "Damo") String name) {
         return "hi " + name + " ,i am from port:" + port;
     }
+
+    @RequestMapping("/hello")
+    public String hello(@RequestParam(value = "name") String name) {
+        return "hello"+ port + name;
+    }
 }
